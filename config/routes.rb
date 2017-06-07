@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get 'pictures/:id/edit' => "pictures#edit", :as => "picture"
   patch 'pictures/:id' => "pictures#update"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  delete 'pictures/:id' => 'pictures#destroy'
+
 end
