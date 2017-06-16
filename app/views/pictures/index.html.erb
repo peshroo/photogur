@@ -20,3 +20,12 @@
       <li><%= picture.title %></li>
     <% end %>
   </ul>
+
+<h1>Pictures Arranged by Year:</h1>
+<h2>2017</h2>
+<%= year = 2017 %>
+  <ul>
+    <% @pictures_created_in_year.each do |picture| %>
+      <li><%= picture.title %></li>
+    <% end %>
+  </ul>

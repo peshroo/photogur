@@ -15,4 +15,11 @@ class Picture < ActiveRecord::Base
   def self.older_than_one_month
     Picture.where("created_at < ?", 1.months.ago)
   end
+
+  def self.pictures_created_in_year(year)
+    start_year = DateTime.new(year)
+    end_year = DateTime.new(year).end_of_year
+    Picture.where("created_at < ?", year)
+  end
+
 end
