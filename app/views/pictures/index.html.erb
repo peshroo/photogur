@@ -13,3 +13,10 @@
     <li><%= picture.title %></li>
   <% end %>
 </ul>
+
+<h1>From Last Month</h1>
+  <ul>
+    <% @older_than_one_month.each do |picture| %>
+      <li><%= picture.title %></li>
+    <% end %>
+  </ul>

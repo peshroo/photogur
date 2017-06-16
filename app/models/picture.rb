@@ -12,4 +12,7 @@ class Picture < ActiveRecord::Base
     Picture.where("created_at < ?", time)
   end
 
+  def self.older_than_one_month
+    Picture.where("created_at < ?", 1.months.ago)
+  end
 end
