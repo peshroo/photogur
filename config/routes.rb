@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   get 'users/new' => 'users#new'
 
   post 'sessions' => 'sessions#create'
-  get 'sessions/new' => 'sessions#new'
+  get 'sessions/new' => 'sessions#new', :as => "new_sessions"
 
   delete 'sessions' => 'sessions#destroy'
 
