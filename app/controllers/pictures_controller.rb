@@ -47,8 +47,12 @@ class PicturesController < ApplicationController
     redirect_to "/pictures"
   end
 
-  def picture_params
-    { title: params[:picture][:title], artist: params[:picture][:artist], url: params[:picture][:url]}
-  end
+  # def picture_params
+  #   { title: params[:picture][:title], artist: params[:picture][:artist], url: params[:picture][:url]}
+  # end
 
+  private
+  def picture_params
+    params.require(:picture).permit(:title, :artist, :url)
+  end
 end
